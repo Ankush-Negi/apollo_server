@@ -5,6 +5,7 @@ export default {
         try {
             const { dataSources: { userAPI } } = context;
             const response = await userAPI.getMe();
+            console.log('value of response', response)
             return response;
         }
         catch(error) {

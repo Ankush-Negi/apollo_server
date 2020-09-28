@@ -5,7 +5,6 @@ type User {
     email: String!
     role: String!
     dob: String!
-    mobileNumber: Int!
     address: String!
     createdAt: String!
     createdBy: String!

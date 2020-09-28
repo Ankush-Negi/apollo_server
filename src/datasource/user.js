@@ -21,9 +21,11 @@ export default class UserAPI extends RESTDataSource {
     }
     async signUpUser(payload) {
         try{
+            console.log('value of payload',payload)
             const response = await this.post('/signup', {...payload});
-            const { data } = response;
-            return data;
+            console.log('value of response', response);
+            const { message } = response;
+            return message;
         } catch(error){
             console.log('Error: ', error);
         }

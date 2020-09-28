@@ -15,6 +15,7 @@ export default {
 
     signUpUser: async( parent, args, context ) => {
         try {
+            console.log('inside signup', args);
             const { user } = args;
             const { dataSources: { userAPI } } = context;
             const response = await userAPI.signUpUser(user);
